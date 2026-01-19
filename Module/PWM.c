@@ -12,12 +12,13 @@ void PWM_Init(void){
 	GPIO_InitStructure.GPIO_Speed =  GPIO_Speed_50MHz;
 	GPIO_Init(GPIOA, &GPIO_InitStructure);
 	
+	/*
 	// GPIO init, also can use GPIO_init.h function
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP; // be used by external device 
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;
 	GPIO_InitStructure.GPIO_Speed =  GPIO_Speed_50MHz;
 	GPIO_Init(GPIOA, &GPIO_InitStructure);
-	
+	*/
 	
 	// Choose the clock for PWM 
 	TIM_InternalClockConfig(TIM2);
@@ -27,7 +28,7 @@ void PWM_Init(void){
 	TIM_TimeBaseInitStructure.TIM_ClockDivision = TIM_CKD_DIV1; // do not divide
 	TIM_TimeBaseInitStructure.TIM_CounterMode = TIM_CounterMode_Up; 
 	TIM_TimeBaseInitStructure.TIM_Period = 100 - 1; // ARR
-	TIM_TimeBaseInitStructure.TIM_Prescaler = 720 - 1; // PSC  10**5 Hz
+	TIM_TimeBaseInitStructure.TIM_Prescaler = 36 - 1; // PSC  10**5 Hz
 	TIM_TimeBaseInitStructure.TIM_RepetitionCounter = 0x00; // not use
 	TIM_TimeBaseInit(TIM2, &TIM_TimeBaseInitStructure);
 	
@@ -41,9 +42,16 @@ void PWM_Init(void){
 	TIM_OCInitStructure.TIM_Pulse = 50;  // CCR; when ARR + 1 = 100, duty is CCR / 100, so the CCR is duty
 	TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
 	TIM_OC1Init(TIM2,  &TIM_OCInitStructure);
+	
+	/*
 	TIM_OCInitStructure.TIM_Pulse = 50; 
 	TIM_OC2Init(TIM2,  &TIM_OCInitStructure);
+	*/
 	
 	// Turn up TIM2
 	TIM_Cmd(TIM2,ENABLE);
+}
+
+void PWM_SetCompare1(uint16_t Compare){
+	TIM_SetCompare1(TIM2, Compare);
 }
