@@ -26,7 +26,7 @@ void Encoder_Init(void)
 	TIM_ICInitStructure.TIM_ICFilter = 0xF;
 	TIM_ICInit(TIM3, &TIM_ICInitStructure);
 	
-	TIM_EncoderInterfaceConfig(TIM3, TIM_EncoderMode_TI12, TIM_ICPolarity_Rising, TIM_ICPolarity_Falling);
+	TIM_EncoderInterfaceConfig(TIM3, TIM_EncoderMode_TI12, TIM_ICPolarity_Rising, TIM_ICPolarity_Rising);
 	
 	TIM_Cmd(TIM3, ENABLE);
 }
