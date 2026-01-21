@@ -1,12 +1,12 @@
-#include "stm32f10x.h"                  // Device header
-#include "Delay.h"
-#include "GPIO_Init.h"
-#include "OLED.h"
-#include "Motor.h"
-#include "RP.h"
-#include "Key_Full.h"
-#include "Encoder.h"
-#include "Serial.h"
+//#include "stm32f10x.h"                  // Device header
+//#include "Delay.h"
+//#include "GPIO_Init.h"
+//#include "OLED.h"
+//#include "Motor.h"
+//#include "RP.h"
+//#include "Key_Full.h"
+//#include "Encoder.h"
+//#include "Serial.h"
 
 
 /* 串口测试 */

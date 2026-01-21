@@ -675,21 +675,26 @@
               <FileType>1</FileType>
               <FilePath>.\User\test.c</FilePath>
             </File>
+            <File>
+              <FileName>main_PID1.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\main_PID1.c</FilePath>
+            </File>
+            <File>
+              <FileName>PID.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\PID.c</FilePath>
+            </File>
+            <File>
+              <FileName>PID.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\User\PID.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>Module</GroupName>
           <Files>
-            <File>
-              <FileName>Timer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Module\Timer.c</FilePath>
-            </File>
-            <File>
-              <FileName>Timer.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Module\Timer.h</FilePath>
-            </File>
             <File>
               <FileName>PWM.c</FileName>
               <FileType>1</FileType>
